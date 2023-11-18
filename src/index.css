@@ -5,6 +5,7 @@
 body {
   background-color: #070707 !important;
   min-height: 100vh;
+  position: relative;
 }
 
 #channel-id:-webkit-autofill,

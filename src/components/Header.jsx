@@ -17,7 +17,7 @@ const Header = ({ getChannelVideos }) => {
     };
 
     return (
-        <header className='py-4 text-white border-b border-gray-800'>
+        <header className='w-full py-4 text-white bg-[#070707] z-50 border-b border-gray-800 sticky top-0 start-0'>
             <div className='container mx-auto px-4 flex flex-wrap justify-between items-center gap-2 sm:gap-4'>
                 <a
                     href='#'

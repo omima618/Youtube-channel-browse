@@ -17,7 +17,7 @@ const Card = ({ video, dragCard, draggedOverCard, onDragHandler }) => {
             onDragEnter={() => (draggedOverCard.current = video.order)}
             onDragOver={(e) => e.preventDefault()}
             onDragEnd={onDragHandler}
-            className='flex flex-col cursor-grab w-full min-[500px]:w-[calc((100%_-_2rem)/2)] md:w-[calc((100%_-_4rem)/3)] lg:w-[calc((100%_-_6rem)/4)] overflow-hidden shadow-[0_0_5px_0_#333] rounded-2xl'
+            className='flex flex-col cursor-grab w-full min-[450px]:w-[calc((100%_-_2rem)/2)] md:w-[calc((100%_-_4rem)/3)] lg:w-[calc((100%_-_6rem)/4)] overflow-hidden shadow-[0_0_5px_0_#333] rounded-2xl'
         >
             <div
                 className='relative w-full aspect-[4/3] cursor-pointer'

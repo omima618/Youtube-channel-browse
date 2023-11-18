@@ -4,7 +4,7 @@ import search from '../assets/search.webp';
 const NoItems = ({ type }) => {
     return (
         <div className='py-12 flex-grow flex flex-col gap-4 justify-center items-center'>
-            <div className='max-w-[80%] aspect-[1/1] w-36'>
+            <div className='max-w-[80%] aspect-[1/1] w-24 sm:w-28 md:w-36'>
                 <img
                     className='w-full'
                     src={type === 'noVideos' ? noVideos : search}

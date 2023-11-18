@@ -38,7 +38,7 @@ function App() {
     return (
         <>
             <Header getChannelVideos={getChannelVideos} />
-            <main className='min-h-[80vh] flex flex-col'>
+            <main className='min-h-[85vh] flex flex-col'>
                 {error ? (
                     <Error error={error.data.error} />
                 ) : (

@@ -49,7 +49,7 @@ const VideosList = () => {
                 <Loader />
             ) : (
                 <div className='container flex-grow flex flex-col mx-auto px-4'>
-                    <div className='flex justify-between items-start gap-2 mb-8'>
+                    <div className='flex flex-wrap justify-between items-start gap-2 mb-8'>
                         <h2 className='text-red-600 text-lg sm:text-2xl font-medium'>
                             {channel?.title}
                         </h2>
@@ -62,7 +62,7 @@ const VideosList = () => {
                                     : 'opacity-100 cursor-pointer'
                             } flex gap-2 items-center ms-auto border-0 text-sm sm:text-base text-white bg-red-600 px-3 py-1 rounded-3xl`}
                         >
-                            Refresh
+                            <span className='hidden min-[450px]:inline'>Refresh</span>
                             <svg
                                 className='h-4'
                                 viewBox='0 0 512 512'
