@@ -4,11 +4,11 @@ import { useLazyGetVideosByChannelIdQuery, channelActions } from './store/youtub
 import Header from './components/Header';
 import Loader from './components/Loader';
 import VideosList from './components/VideosList';
+import Error from './components/Error';
 
 function App() {
     const dispatch = useDispatch();
-    const [trigger, { isFetching, data }] = useLazyGetVideosByChannelIdQuery();
-
+    const [trigger, { isFetching, error, data }] = useLazyGetVideosByChannelIdQuery();
     const getChannelVideos = async (id) => {
         await trigger(id);
     };
@@ -39,7 +39,11 @@ function App() {
         <>
             <Header getChannelVideos={getChannelVideos} />
             <main className='min-h-[80vh] flex flex-col'>
-                {isFetching ? <Loader /> : <VideosList />}
+                {error ? (
+                    <Error error={error.data.error} />
+                ) : (
+                    <>{isFetching ? <Loader /> : <VideosList />}</>
+                )}
             </main>
         </>
     );
