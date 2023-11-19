@@ -25,9 +25,8 @@ const VideosList = () => {
 
     const sortCardsHandler = () => {
         const clonedVideos = JSON.parse(JSON.stringify(channel.videos));
-        const temp = clonedVideos[dragCard.current];
-        clonedVideos[dragCard.current] = clonedVideos[draggedOverCard.current];
-        clonedVideos[draggedOverCard.current] = temp;
+        const movedCard = clonedVideos.splice(dragCard.current, 1)[0];
+        clonedVideos.splice(draggedOverCard.current, 0, movedCard);
         clonedVideos.forEach((video, i) => (video.order = i));
         dispatch(
             channelActions.setChannel({

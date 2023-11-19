@@ -9,7 +9,7 @@ export const YoutubeApi = createApi({
     endpoints: (builder) => ({
         getVideosByChannelId: builder.query({
             query: (channelId) =>
-                `search?part=snippet&channelId=${channelId}&part=snippet,id&order=date&maxResults=100&key=${
+                `search?part=snippet&channelId=${channelId}&part=snippet,id&order=date&maxResults=50&key=${
                     import.meta.env.VITE_API_KEY
                 }`,
         }),
